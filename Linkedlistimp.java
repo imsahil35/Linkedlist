@@ -76,8 +76,10 @@ public void addAtMiddle(String i,int pos)
     public void deletepos(int pos){
         Node temp = this.head;
         for(int i=0;i<pos;i++){
-
+            temp = temp.next;
         }
+        temp.next = temp.next.next;
+        this.size -=1;
     }
     public void find(int value){
         Node current = this.head;
